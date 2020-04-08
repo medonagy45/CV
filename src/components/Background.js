@@ -8,8 +8,7 @@ class Background extends Component {
 const styles = {
   background: {
     background: "rgb(204,204,204)",
-    // width: '2cm',
-    height: "50cm"
+    textAlign: "-webkit-center"
   }
 };
 export default Background;

@@ -12,7 +12,7 @@ const styles = {
     padding: "10px",
     width: "21cm",
     minHeight: "29.7cm",
-    margin: "10mm 45mm"
+    marginBottom: "10px"
   }
 };
 export default Page;
