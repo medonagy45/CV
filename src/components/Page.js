@@ -11,8 +11,8 @@ const styles = {
     background: "white",
     padding: "10px",
     width: "21cm",
-    height: "29.7cm",
-    margin: "0mm 45mm"
+    minHeight: "29.7cm",
+    margin: "10mm 45mm"
   }
 };
 export default Page;

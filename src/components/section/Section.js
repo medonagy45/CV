@@ -4,7 +4,6 @@ import SectionBody from "./SectionBody";
 // import photo from "../../crop.jpg";
 class Section extends Component {
   render() {
-    console.log(window.location.origin);
     // var photo = window.location.origin + "/crop.jpg";
     return (
       <div style={{ display: "flex", flexDirection: "row-reverse" }}>
