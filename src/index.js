@@ -4,6 +4,16 @@ import "./index.css";
 import Main from "./components/Main";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faCheck,
+  faBicycle,
+  faSwimmer,
+  faBookReader
+} from "@fortawesome/free-solid-svg-icons";
+import "./fonts/Lato-Italic.ttf";
+
+library.add(faCheck, faBicycle, faSwimmer, faBookReader);
 
 ReactDOM.render(<Main />, document.getElementById("root"));
 

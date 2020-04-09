@@ -94,44 +94,66 @@ Responsibilities:
       }
     },
     {
-      title: "Languages",
+      title: "Software skills",
       body: {
-        Arabic: { rating: 6 },
-        English: { rating: 5 },
-        German: { rating: 1 }
+        AngularJS: { rating: 5 },
+        NodeJS: { rating: 5 },
+        MongoDB: { rating: 5 },
+        "React-Native": { rating: 4 },
+        Sql: { rating: 4 },
+        JSF: { rating: 4 },
+        JSP: { rating: 4 },
+        EJB: { rating: 4 },
+        Hibernate: { rating: 3 },
+        Laravel: { rating: 3 },
+        "PL/SQL": { rating: 3 },
+        Spring: { rating: 2 }
       }
     },
     {
-      title: "Languages",
-      body: {
-        Arabic: { rating: 6 },
-        English: { rating: 5 },
-        German: { rating: 1 }
-      }
+      title: "Skills",
+      body: [
+        "<u><b>Languages & Scripts:</b></u> PHP / Java SE / J2EE / Shell-Scripting / Python / NodeJs",
+        "<u><b>Databases:</b></u> MongoDB/ MySQL / Oracle ",
+        "<u><b>Data Access Layer:</b></u> Mongoose / JPA / Hibernate / JDBC",
+        "<u><b>Front End Skills:</b></u> AngularJS / ReactJS / React-Native / Primefaces / RichFaces  / JavaFX /JSP/HTML / CSS / JavaScript / JQuery ",
+        "<u><b>Application Servers:</b></u> Tomcat / JBoss /  PM2 / Apache2 ",
+        "<u><b>Unit Testing:</b></u> Junit /Mocha",
+        "<u><b>Load Testing Tools:</b></u>Soap UI",
+        "<u><b>Build Tools:</b></u> Maven / Ant / Parcel",
+        "<u><b>Web Services:</b></u> RESTful / SOAP",
+        "<u><b>Version Control:</b></u> SVN / GIT / CVS",
+        "<u><b>IDE:</b></u> Eclipse / VSCode",
+        "<u><b>Others:</b></u> EJB / AWS / Flask",
+        "<u><b>Old Knowledge - Embedded Systems:</b></u> Verilog Hardware Language / Microcontroller (PIC) / Proteus Design Suite / Arduino / DC & Stepper Motor Control ."
+      ]
     },
     {
-      title: "Languages",
-      body: {
-        Arabic: { rating: 6 },
-        English: { rating: 5 },
-        German: { rating: 1 }
-      }
+      title: "Personality",
+      body: [
+        "Communicative",
+        "Creativity",
+        "Organized",
+        "responsibility",
+        "Self-Motivated"
+      ]
     },
     {
-      title: "Languages",
-      body: {
-        Arabic: { rating: 6 },
-        English: { rating: 5 },
-        German: { rating: 1 }
-      }
-    },
-    {
-      title: "Languages",
-      body: {
-        Arabic: { rating: 6 },
-        English: { rating: 5 },
-        German: { rating: 1 }
-      }
+      title: "Achievements ",
+      body: [
+        "Volunteering as Software Developer for Ahlan-group Charity for 2 years developed a Facebook chat-bot.",
+        "Worked as a freelancer on Upwork developing a supermarket system using FXML , Java and MySQL.",
+        "Having the 1st rank in the 3rd year first semester Hardware project (16 -bit processor with many added features)",
+        "Having 2 publications (one is paper and the other is Journal) in the field of Accelerating Electromagnetic Solvers via Hardware Emulation"
+      ]
+      // },
+      // {
+      //   title: "Hobbies ",
+      //   body: {
+      //     Cycling: { icon: "bicycle" },
+      //     Swimming: { icon: "swimmer" },
+      //     Reading: { icon: "book-reader" }
+      // }
     }
   ]
 };

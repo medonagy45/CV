@@ -10,12 +10,12 @@ class Section extends Component {
         {this.props.photo ? (
           <>
             {/* <img style={styles.photo} src={photo} alt="" /> */}
-            <img style={styles.photo} src={this.props.photo.uri} alt="" />
-            {/* <img
+            {/* <img style={styles.photo} src={this.props.photo.uri} alt="" /> */}
+            <img
               style={styles.photo}
               src={process.env.PUBLIC_URL + "/crop.jpg"}
               alt=""
-            /> */}
+            />
           </>
         ) : (
           <></>
@@ -32,6 +32,7 @@ class Section extends Component {
 }
 const styles = {
   table: {
+    // fontFamily: "Lato Italic",
     // width: "425px",
     // width: "-webkit-fill-available",
     flex: 4
