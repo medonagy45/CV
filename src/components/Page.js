@@ -1,18 +1,13 @@
 import React, { Component } from "react";
+import { StyleContext } from "../context/StyleContext";
+
 class Page extends Component {
   state = {};
   render() {
-    return <div style={styles.page}>{this.props.children} </div>;
+    return (
+      <div className={this.context.styles.Page}>{this.props.children}</div>
+    );
   }
 }
-
-const styles = {
-  page: {
-    background: "white",
-    padding: "10px",
-    width: "21cm",
-    minHeight: "29.7cm",
-    marginBottom: "10px"
-  }
-};
+Page.contextType = StyleContext;
 export default Page;

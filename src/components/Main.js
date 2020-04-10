@@ -5,6 +5,7 @@ import Background from "./Background";
 import Page from "./Page";
 import Section from "./section/Section";
 import { getUserData } from "./fetchData/userData";
+import StyleContextProvider from "../context/StyleContext";
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -49,20 +50,22 @@ class Main extends Component {
   }
   render() {
     return (
-      <Background style={{}}>
-        {this.state.data.map((data, index) => (
-          <Page key={index} ref={this.ref[index]}>
-            {data.map((data, index) => (
-              <Section
-                key={index}
-                title={data.title}
-                body={data.body}
-                photo={data.photo}
-              ></Section>
-            ))}
-          </Page>
-        ))}
-      </Background>
+      <StyleContextProvider>
+        <Background style={{}}>
+          {this.state.data.map((data, index) => (
+            <Page key={index} ref={this.ref[index]}>
+              {data.map((data, index) => (
+                <Section
+                  key={index}
+                  title={data.title}
+                  body={data.body}
+                  photo={data.photo}
+                ></Section>
+              ))}
+            </Page>
+          ))}
+        </Background>
+      </StyleContextProvider>
     );
   }
 }

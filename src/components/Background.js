@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import { StyleContext } from "../context/StyleContext";
+
 class Background extends Component {
   state = {};
   render() {
-    return <div style={styles.background}>{this.props.children} </div>;
+    return (
+      <div className={this.context.styles.background}>
+        {this.props.children}{" "}
+      </div>
+    );
   }
 }
-const styles = {
-  background: {
-    background: "rgb(204,204,204)",
-    textAlign: "-webkit-center"
-  }
-};
+Background.contextType = StyleContext;
 export default Background;
