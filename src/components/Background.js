@@ -6,7 +6,7 @@ class Background extends Component {
   render() {
     return (
       <div className={this.context.styles.background}>
-        {this.props.children}{" "}
+        {this.props.children}
       </div>
     );
   }

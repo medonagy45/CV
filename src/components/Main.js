@@ -28,6 +28,8 @@ class Main extends Component {
     }
   }
   componentDidUpdate() {
+    console.log("update");
+
     for (let index = 0; index < this.ref.length; index++) {
       let pageHeight = ReactDOM.findDOMNode(
         this.ref[index].current
@@ -48,18 +50,38 @@ class Main extends Component {
       }
     }
   }
+  swap = (movingSection, fixedSection) => {
+    let newData = this.state.data;
+    console.log(newData[movingSection.page][movingSection.id]);
+    newData[fixedSection.page].splice(
+      fixedSection.id,
+      0,
+      newData[movingSection.page][movingSection.id]
+    );
+    console.log(movingSection.id, fixedSection.id);
+    if (movingSection.page === fixedSection.page)
+      if (movingSection.id > fixedSection.id)
+        newData[movingSection.page].splice(movingSection.id + 1, 1);
+      else newData[movingSection.page].splice(movingSection.id - 1, 1);
+    else newData[movingSection.page].splice(movingSection.id, 1);
+    this.setState({ data: [newData.flat()] });
+  };
+
   render() {
     return (
       <StyleContextProvider>
-        <Background style={{}}>
-          {this.state.data.map((data, index) => (
-            <Page key={index} ref={this.ref[index]}>
+        <Background>
+          {this.state.data.map((data, i) => (
+            <Page key={i} ref={this.ref[i]}>
               {data.map((data, index) => (
                 <Section
                   key={index}
                   title={data.title}
                   body={data.body}
                   photo={data.photo}
+                  swap={this.swap}
+                  page={i}
+                  id={index}
                 ></Section>
               ))}
             </Page>

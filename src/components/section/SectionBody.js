@@ -7,15 +7,19 @@ class SectionBody extends Component {
   render() {
     if (Array.isArray(this.props.body))
       //body without label
-      return this.props.body.map(data => (
-        <div className={this.context.styles.content}>
-          <FontAwesomeIcon style={{ padding: "2px" }} icon="check" />
-          <span dangerouslySetInnerHTML={{ __html: data }}></span>
-          <br />
-        </div>
+      return this.props.body.map((data, i) => (
+        <tr key={i} className={this.context.styles.content}>
+          <td>
+            <FontAwesomeIcon
+              className={this.context.styles.bullet}
+              icon="check"
+            />
+            <span dangerouslySetInnerHTML={{ __html: data }}></span>
+          </td>
+        </tr>
       ));
     return Object.keys(this.props.body).map((keyName, i) => (
-      <tr key={i} style={{ lineHeight: "12.65px" }}>
+      <tr key={i}>
         <th className={this.context.styles.label}>
           <span>{keyName}</span>
           {keyName ? ":" : ""}
