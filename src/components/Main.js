@@ -31,39 +31,32 @@ class Main extends Component {
     console.log("update");
 
     for (let index = 0; index < this.ref.length; index++) {
-      let pageHeight = ReactDOM.findDOMNode(
-        this.ref[index].current
-      ).getBoundingClientRect().height;
-      let overHeight = pageHeight - this.A4.height;
-      let newData = this.state.data;
-      if (overHeight > 0) {
-        let lastElement = newData[index].pop();
-        newData[index + 1]
-          ? newData[index + 1].unshift(lastElement)
-          : newData.push([lastElement]);
-        this.setState({
-          data: newData
-        });
-        if (index + 1 === this.ref.length)
-          this.ref[index + 1] = React.createRef();
-        return;
+      let page = ReactDOM.findDOMNode(this.ref[index].current);
+      if (page) {
+        let pageHeight = ReactDOM.findDOMNode(
+          this.ref[index].current
+        ).getBoundingClientRect().height;
+        let overHeight = pageHeight - this.A4.height;
+        let newData = this.state.data;
+        if (overHeight > 0) {
+          let lastElement = newData[index].pop();
+          newData[index + 1]
+            ? newData[index + 1].unshift(lastElement)
+            : newData.push([lastElement]);
+          this.setState({
+            data: newData
+          });
+          if (index + 1 === this.ref.length)
+            this.ref[index + 1] = React.createRef();
+          return;
+        }
       }
     }
   }
-  swap = (movingSection, fixedSection) => {
+  move = (movingSection, fixedSection) => {
     let newData = this.state.data;
-    console.log(newData[movingSection.page][movingSection.id]);
-    newData[fixedSection.page].splice(
-      fixedSection.id,
-      0,
-      newData[movingSection.page][movingSection.id]
-    );
-    console.log(movingSection.id, fixedSection.id);
-    if (movingSection.page === fixedSection.page)
-      if (movingSection.id > fixedSection.id)
-        newData[movingSection.page].splice(movingSection.id + 1, 1);
-      else newData[movingSection.page].splice(movingSection.id - 1, 1);
-    else newData[movingSection.page].splice(movingSection.id, 1);
+    let removed = newData[movingSection.page].splice(movingSection.id, 1);
+    newData[fixedSection.page].splice(fixedSection.id, 0, ...removed);
     this.setState({ data: [newData.flat()] });
   };
 
@@ -79,7 +72,7 @@ class Main extends Component {
                   title={data.title}
                   body={data.body}
                   photo={data.photo}
-                  swap={this.swap}
+                  move={this.move}
                   page={i}
                   id={index}
                 ></Section>

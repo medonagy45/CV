@@ -60,3 +60,12 @@
 .bullet {
   padding: 2px;
 }
+.box-placeholder {
+  background-color: #f0f0f0;
+  height: 75px;
+  visibility: visible;
+  clear: both;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}

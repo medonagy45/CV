@@ -29,7 +29,7 @@ const userData = {
             </b>
             <br />
             <span>
-              Major: Electrical Engineering, Minor: Computer & Systems
+              Major: Computer & Systems, Minor: Electrical Engineering 
               <br />
               Graduation Project (2013/2014) Excellent It was about accelerating
               electromagnetic solving equations via emulation technology.
